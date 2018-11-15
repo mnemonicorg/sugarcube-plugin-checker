@@ -13,10 +13,10 @@
     "transformation"
   ],
   "config": {
-      "srcDir": "lib",
-      "testDir": "test",
-      "distDir": "_dist",
-      "reporter": "spec"
+    "srcDir": "lib",
+    "testDir": "test",
+    "distDir": "_dist",
+    "reporter": "spec"
   },
   "scripts": {
     "test": "",
@@ -49,7 +49,8 @@
     "sinon": "^2.1.0"
   },
   "dependencies": {
-    "@sugarcube/core": "0.5.0",
+    "@sugarcube/core": "^0.5.0",
+    "@sugarcube/plugin-youtube": "^0.13.2",
     "dashp": "^0.8.1",
     "lodash": "^4.17.5",
     "source-map-support": "^0.5.9"

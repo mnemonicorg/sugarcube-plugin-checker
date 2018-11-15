@@ -1,0 +1,57 @@
+{
+  "name": "sugarcube-plugin-checker",
+  "version": "0.7.0",
+  "description": "",
+  "main": "_dist/index.js",
+  "license": "GPL-3.0",
+  "repository": "https://gitlab.com/sugarcube/sugarcube/tree/master/packages/plugin-",
+  "author": "",
+  "keywords": [
+    "sugarcube",
+    "sugarcube-plugin",
+    "data",
+    "transformation"
+  ],
+  "config": {
+      "srcDir": "lib",
+      "testDir": "test",
+      "distDir": "_dist",
+      "reporter": "spec"
+  },
+  "scripts": {
+    "test": "",
+    "lint": "eslint packages/**/lib/**/*.js test/**/*.js boilerplate-plugin/lib/**/*.js",
+    "compile": "babel -d $npm_package_config_distDir $npm_package_config_srcDir",
+    "watch:test": "chokidar \"$npm_package_config_testDir/**/*.js\" \"$npm_package_config_srcDir/**/*.js\" -c \"npm run test -s\"",
+    "watch:lint": "chokidar \"$npm_package_config_testDir/**/*.js\" \"$npm_package_config_srcDir/**/*.js\" -c \"npm run lint -s\"",
+    "watch:docs": "chokidar \"$npm_package_config_srcDir/**/*.js\" -s \"npm run docs\"",
+    "watch:build": "chokidar \"$npm_package_config_srcDir/**/*.js\" -c \"npm run compile -s\"",
+    "watch": "concurrently -p \"[{name}]\" -n \"LINT,BUILD,TEST,DOCS\" \"npm run watch:lint\" \"npm run watch:build\" \"npm run watch:test\" \"npm run watch:docs\"",
+    "docs:plugin": "documentation readme --shallow --readme-file Readme.md -s \"Plugins\" $npm_package_config_srcDir/index.js",
+    "docs": "for i in plugin; do npm run docs:$i -s; done",
+    "prebuild": "npm run clean && npm run lint && npm run test",
+    "build": "npm run compile",
+    "clean": "rm -rf $npm_package_config_distDir"
+  },
+  "devDependencies": {
+    "@sugarcube/eslint-config-sugarcube": "^0.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.2.1",
+    "babel-preset-es2015": "^6.24.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "chokidar-cli": "^1.2.0",
+    "concurrently": "^3.4.0",
+    "documentation": "^4.0.0-beta.18",
+    "eslint": "^4.9.0",
+    "jsverify": "^0.8.1",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0"
+  },
+  "dependencies": {
+    "@sugarcube/core": "0.5.0",
+    "dashp": "^0.8.1",
+    "lodash": "^4.17.5",
+    "source-map-support": "^0.5.9"
+  }
+}

@@ -1,0 +1,11 @@
+2018-11-16T14:10:47.465Z - info: Starting run c75c6a9683d8cb907b7e545bb5efebd7e15e1224.
+2018-11-16T14:10:47.468Z - info: Starting the mongodb_query_units plugin.
+2018-11-16T14:11:18.843Z - info: Queried 1312 units for {"cid.incident_date":{"$gte":"2014-05-01","$lt":"2014-05-03"}}.
+2018-11-16T14:11:20.353Z - info: Finished the mongodb_query_units plugin.
+2018-11-16T14:11:20.353Z - info: Starting the check_youtube_videos plugin.
+2018-11-16T14:11:20.354Z - info: Checking youtube videos from sources youtube_channel,youtube_video in 1312 units.
+1312
+2018-11-16T14:19:22.207Z - info: Checked 1304 units - 425 units removed.
+2018-11-16T14:19:23.602Z - info: Finished the check_youtube_videos plugin.
+2018-11-16T14:19:23.603Z - info: receiving stats for: none
+2018-11-16T14:19:23.603Z - info: Finished the LSD.

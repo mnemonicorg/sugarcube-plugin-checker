@@ -1,0 +1,11 @@
+2018-11-20T13:03:08.043Z - info:     Starting the check_youtube_videos plugin.
+2018-11-20T13:03:08.044Z - info:     Checking youtube videos from sources youtube_channel,youtube_video,sheets_import in 3443 units.
+TypeError: Cannot read property 'snippet' of undefined
+    at exports.video.item (/home/uer/f/code/sugarcube/packages/plugin-youtube/lib/entities.js:8:39)
+    at c (/home/uer/f/code/sugarcube/packages/plugin-youtube/node_modules/lodash/lodash.min.js:6:348)
+    at ru (/home/uer/f/code/sugarcube/packages/plugin-youtube/node_modules/lodash/lodash.min.js:67:186)
+    at l (/home/uer/f/code/sugarcube/packages/plugin-youtube/node_modules/lodash/lodash.min.js:50:137)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+2018-11-20T13:03:09.362Z - error: Cannot read property 'data' of undefined
+uer@uer~/f/code/syrianarchive-sugarcube

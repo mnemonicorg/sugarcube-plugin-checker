@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@sugarcube/core": "../sugarcube/packages/core",
-    "@sugarcube/plugin-youtube": "../sugarcube/packages/plugin-youtube",
+    "@sugarcube/plugin-youtube": "^0.16.0",
     "dashp": "^0.8.1",
     "lodash": "^4.17.5",
     "moment": "^2.22.2",
